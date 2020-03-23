@@ -1,0 +1,110 @@
+#header {
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    z-index: 0;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2vh;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #333;
+    margin-left: 4em;
+    text-align: left;
+    font-size: 2em;
+    padding: 2em;
+}
+
+.nav-link {
+    padding: 2em;
+    text-decoration: none;    
+    color: pink;   
+    z-index: 3;
+}
+
+#header-img {
+    position: relative;
+    max-width:100%;
+    display: block; 
+}
+
+#header-container {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+
+#image-container{
+    padding: 1em;
+    max-height: 5em;
+    max-width: 5em;
+    overflow: hidden;
+    /* Image needs to be above the nav-bar*/
+    z-index: 2;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 750px;
+    position: relative;
+    top: 6em;
+    z-index: 0;
+  }
+
+
+  #form-container {
+    padding: 5em;
+    border: solid 1em;
+    border-color: green;
+  }
+
+  h1{
+      font-size: 4em;
+  }
+
+  #email {
+      width: 20em;
+      font-size: 1em;
+  }
+
+  #submit-container {
+      margin-top: 2em;  
+      
+  }
+
+  #submit {
+    width: 20em;
+  }
+
+  footer{
+      height: 5em;
+      margin-top: 6em;
+      
+  }
+  #about-container{
+      padding: 5em;
+      border-top: 1em solid  black;
+      border-left: 1em solid  pink;
+     
+  }
+
+  /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    #nav-bar a {
+      float: none;
+      width: 100%;
+    }
+
+    /* Hide the header's image as it blocks the links of nav-bar */
+    #header-img {
+        display: none;
+    }
+  }
